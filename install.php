@@ -20,10 +20,10 @@ $substr2 = substr($mystring2, 0, $nbtocut);
 if ($substr2 == "Iliad/Free"){
 $pathm3u = "http://mafreebox.freebox.fr/freeboxtv/playlist.m3u";
 }
-else if ($substr2 == "Orange"){
+elseif ($substr2 == "Orange"){
 $pathm3u = "http://www.m3u.fr/orangetv.m3u";
 }
-else if ($substr2 == "SFR"){
+elseif ($substr2 == "SFR"){
 $pathm3u = "http://www.m3u.fr/sfrtv.m3u";
 }
 $handle = fopen("../yana-server/plugins/plugin-tv-server/plugin-tv-client/pathm3u.txt", "r+");
