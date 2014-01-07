@@ -20,6 +20,19 @@ $substr2 = substr($mystring2, 0, $nbtocut);
 if ($substr2 == "Iliad/Free"){
 $pathm3u = "http://mafreebox.freebox.fr/freeboxtv/playlist.m3u";
 }
+else if ($substr2 == "Orange"){
+$pathm3u = "http://www.m3u.fr/orangetv.m3u";
+}
+else if ($substr2 == "SFR"){
+$pathm3u = "http://www.m3u.fr/sfrtv.m3u";
+}
+$handle = fopen("../yana-server/plugins/plugin-tv-server/plugin-tv-client/pathm3u.txt", "r+");
+
+$pathm3utofile = 'http://localhost:8080/requests/status.xml?command=in_play&input='.$pathm3u;
+ftruncate($handle,0);// on vide le fichier
+fseek($handle, 0); // On remet le curseur au début du fichier
+fputs($handle, $pathm3utofile); // On écrit le nouveau nombre de pages vues
+fclose($handle);
 
 require_once('PluginTV.class.php');
 $ps = new PluginTV();

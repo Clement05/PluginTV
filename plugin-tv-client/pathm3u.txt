@@ -1,4 +1,9 @@
+//Free
 http://localhost:8080/requests/status.xml?command=in_play&input=http://mafreebox.freebox.fr/freeboxtv/playlist.m3u
 
 
 
+//Orange
+http://localhost:8080/requests/status.xml?command=in_play&input=http://www.m3u.fr/orangetv.m3u
+//SFR
+http://localhost:8080/requests/status.xml?command=in_play&input=http://www.m3u.fr/sfrtv.m3u
